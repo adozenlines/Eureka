@@ -37,6 +37,8 @@ class CustomCellsController : FormViewController {
 
             <<< TextFloatLabelRow() {
                 $0.title = "Float Label Row, type something to see.."
+                let swipe = SwipeAction(style: .normal, title: "Test", handler: {_,_,_ in })
+                $0.trailingSwipe.actions = [swipe]
             }
 
             <<< IntFloatLabelRow() {

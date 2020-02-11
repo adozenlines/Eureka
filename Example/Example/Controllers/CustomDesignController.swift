@@ -15,6 +15,7 @@ class CustomDesignController: FormViewController {
         form +++
             Section()
             <<< SwitchRow() {
+                
                 $0.cellProvider = CellProvider<SwitchCell>(nibName: "SwitchCell", bundle: Bundle.main)
             }.cellSetup { (cell, row) in
                 cell.height = { 67 }
@@ -27,6 +28,7 @@ class CustomDesignController: FormViewController {
             }
 
             <<< TextRow() {
+                
                 $0.cellProvider = CellProvider<TextCell>(nibName: "TextCell", bundle: Bundle.main)
                 }.cellSetup { (cell, row) in
                     cell.height = { 199 }

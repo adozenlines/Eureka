@@ -198,6 +198,18 @@ public class _FloatLabelCell<T>: Cell<T>, UITextFieldDelegate, TextFieldCell whe
         return NSLayoutConstraint.constraints(withVisualFormat: "H:|-[floatLabeledTextField]-|", options: .alignAllLastBaseline, metrics: metrics, views: views) + NSLayoutConstraint.constraints(withVisualFormat: "V:|-(vMargin)-[floatLabeledTextField]-(vMargin)-|", options: .alignAllLastBaseline, metrics: metrics, views: views)
     }
 
+    private func layoutContentLeftConstraints() -> [NSLayoutConstraint] {
+        let views = ["contentView": contentView]
+        let metrics = ["vMargin":8.0]
+        return NSLayoutConstraint.constraints(withVisualFormat: "H:|-(-120)-[contentView]-|", options: .alignAllLastBaseline, metrics: metrics, views: views)
+    }
+
+    private func layoutContentOriginConstraints() -> [NSLayoutConstraint] {
+        let views = ["contentView": contentView]
+        let metrics = ["vMargin":8.0]
+        return NSLayoutConstraint.constraints(withVisualFormat: "H:|-(0)-[contentView]-|", options: .alignAllLastBaseline, metrics: metrics, views: views)
+    }
+
     @objc public func textFieldDidChange(_ textField : UITextField){
         guard let textValue = textField.text else {
             row.value = nil

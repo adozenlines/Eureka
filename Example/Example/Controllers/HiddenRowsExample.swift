@@ -18,13 +18,13 @@ class HiddenRowsExample : FormViewController {
         }
 
         form = Section("What do you want to talk about:")
-            <<< SegmentedRow<String>("segments"){
+            <<< SegmentedRow<String>("desk"){
                 $0.options = ["Sport", "Music", "Films"]
                 $0.value = "Films"
             }
             +++ Section(){
                 $0.tag = "sport_s"
-                $0.hidden = "$segments != 'Sport'" // .Predicate(NSPredicate(format: "$segments != 'Sport'"))
+                $0.hidden = "$desk != 'Sport'" // .Predicate(NSPredicate(format: "$segments != 'Sport'"))
             }
             <<< TextRow(){
                 $0.title = "Which is your favourite soccer player?"
@@ -40,7 +40,7 @@ class HiddenRowsExample : FormViewController {
 
             +++ Section(){
                 $0.tag = "music_s"
-                $0.hidden = "$segments != 'Music'"
+                $0.hidden = "$desk != 'Music'"
             }
             <<< TextRow(){
                 $0.title = "Which music style do you like most?"
@@ -55,7 +55,7 @@ class HiddenRowsExample : FormViewController {
 
             +++ Section(){
                 $0.tag = "films_s"
-                $0.hidden = "$segments != 'Films'"
+                $0.hidden = "$desk != 'Films'"
             }
             <<< TextRow(){
                 $0.title = "Which is your favourite actor?"
