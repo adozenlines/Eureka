@@ -1,6 +1,41 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+### [5.3.3](https://github.com/xmartlabs/Eureka/releases/tag/5.3.3)
+
+* Add option for different ScrollPosition behavior on keyboard appearance (#2112)
+* Prefix Eureka to certain class names to avoid clashes with other pods (#2113)
+* Remove the default header title of section (#2128)
+* Modify hugging priority for PasswordRow (#2129)
+* Add replace method for all sections (#2105)
+* Fix: Non-public API usage (valueChanged, datePickerValueChanged) (#2130)
+* Fix: remove EXCLUDED_ARCHS build setting to support M1 mac iphone simulator (#2137)
+* Fix: removeAll method in sections (#2141)
+
+
+### [5.3.2](https://github.com/xmartlabs/Eureka/releases/tag/5.3.2)
+
+* Make tableViewStyle public (#2092)
+* Fix CountDown rows crash (#2095)
+* Make ValidationRuleHelper's rule property public. (#2101)
+* Fix for building with Carthage and Xcode 12 (#2104)
+
+### [5.3.1](https://github.com/xmartlabs/Eureka/releases/tag/5.3.1)
+
+* Fix building for Mac Catalyst on Xcode 12 (#2078)
+* Fix datePickerStyle for DateFieldRow and DatePickerCell (#2077)
+* Adjust font size of PasswordRow to avoid dots (#2080)
+
+### [5.3.0](https://github.com/xmartlabs/Eureka/releases/tag/5.3.0)
+
+* Reload rows on viewWillAppear for iOS 12 and below. (#2029)
+* Change validation functions access level to open (#2049)
+* Start editing field rows at the end when tapping blank space in row (#2046)
+* Update SelectorViewController.swift (#2062)
+* Fix subtitle field row constraints (#2069)
+* Create a workaround for Swift crash (#2057, #2061)
+* Fix date row style/rendering issues for iOS 14 (#2067)
+
 ### [5.2.1](https://github.com/xmartlabs/Eureka/releases/tag/5.2.1)
 
 * Mark `tableView:editActionsForRowAt` as deprecated (#2000)
@@ -27,7 +62,7 @@ All notable changes to this project will be documented in this file.
 ### [5.0.1](https://github.com/xmartlabs/Eureka/releases/tag/5.0.1)
 
 * Added `quietly` parameter for use with non-ui validation (#1817)
-* RuleMinLength (and others) now pass for nil and empty strings. 
+* RuleMinLength (and others) now pass for nil and empty strings.
 * iOS deployment target back on iOS 9.0
 * Several other fixes
 
